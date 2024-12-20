@@ -2587,18 +2587,18 @@ input, select, textarea {
 		-webkit-justify-content: space-between;
 		-ms-justify-content: space-between;
 		justify-content: space-between;
-		background-color: #1f1815;
+		background-color: #735D59;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left,							top left;
+		background-image: url("images/overlay.png"),url("../../images/Gradient\ Make\ Yourself\ Proud\ Quote\ Poster.png");
+		background-position: top center,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-size: auto,								110%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
-		text-align: right;
+		text-align: left;
 		top: 0;
 		width: 35%;
 	}
@@ -3213,5 +3213,103 @@ input, select, textarea {
 				margin-left: 0;
 				padding-left: 0;
 			}
-
+/* Reset */
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	display: flex;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+	width: 200px;
+	background-color: #ffffff;
+	color: white;
+	position: fixed;
+	height: 100%;
+	transition: width 0.3s;
+	overflow: hidden;
+  }
+  
+  .sidebar.active {
+	width: 60px;
+  }
+  
+  .sidebar-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+	background-color: #ffffff;
+  }
+  
+  .sidebar-header h2 {
+	margin: 0;
+	font-size: 1.2rem;
+  }
+  
+  .toggle-btn {
+	background: none;
+	color: #ffffff;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+  }
+  
+  .nav-menu {
+	margin-top: 20px;
+  }
+  
+  .nav-menu ul {
+	list-style: none;
+	padding: 1;
+  }
+  
+  .nav-menu li {
+	margin: 15px 0;
+  }
+  
+  .nav-menu a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 10px 20px;
+	display: block;
+	transition: background 0.3s;
+  }
+  
+  .nav-menu a:hover {
+	background-color: #5cc6a7;
+  }
+  
+  /* Main Content */
+  .main-content {
+	margin-left: 250px;
+	padding: 20px;
+	flex: 1;
+	transition: margin-left 0.3s;
+  }
+  
+  .sidebar.active + .main-content {
+	margin-left: 60px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+	.sidebar {
+	  width: 0;
+	}
+  
+	.sidebar.active {
+	  width: 200px;
+	}
+  
+	.main-content {
+	  margin-left: 0;
+	}
+  
+	.sidebar.active + .main-content {
+	  margin-left: 200px;
+	}
+  }
+  
 	}
